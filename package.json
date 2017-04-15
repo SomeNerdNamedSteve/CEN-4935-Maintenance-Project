@@ -4,12 +4,12 @@
   "description": "Maintenance Project for CEN 4935",
   "main": "index.js",
   "dependencies":{
-    "express": "*",
-    "react": "*"
+    "express": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/SomeNerdNamedSteve/CEN-4935-Maintenance-Project.git",
   "author": "Steven Burgess",
   "license": "ISC"
 }
