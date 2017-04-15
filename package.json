@@ -1,0 +1,15 @@
+{
+  "name": "pioneer_3-at_maintenance-project",
+  "version": "1.0.0",
+  "description": "Maintenance Project for CEN 4935",
+  "main": "index.js",
+  "dependencies":{
+    "express": "*",
+    "react": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Burgess",
+  "license": "ISC"
+}
