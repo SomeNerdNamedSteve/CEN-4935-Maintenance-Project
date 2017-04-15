@@ -1,3 +1,5 @@
 var robotApp = angular.module('robotApp', []);
 
-robotApp.controller(function($scope){});
+robotApp.controller('robotControlController', function($scope){
+    
+});
