@@ -1,7 +1,7 @@
 //dependencies
 var express = require('express');
 var path = require('path');
-var engines = require('consolidate')
+var networking = require('./networking')
 
 //variables
 var RUN_PORT = 8080;
@@ -24,6 +24,11 @@ app.get('/robot_control', function(req, res){
 //error.html routing
 app.get('/error', function(req, res){
 	res.render("error.html");
+});
+
+//HTTP GET Request from front end
+app.get('/verify_ip/:ipAddr', function(req, res){
+    var url = networking.connectToRobot(req.params.ipAddr.substring(1));
 });
 
 //showing that the program is running on the RUN_PORT
