@@ -1,7 +1,8 @@
 var net = require('net');
+var convert = require('convert-string');
 
 var VIDEO_IN_PORT = 45679;
-var CONTROL_OUT = 45678;
+var CONTROL_OUT_PORT = 45678;
 var connectingIP = ""
 
 var validateIP = function(ip){
@@ -14,7 +15,12 @@ var validateIP = function(ip){
 }
 
 var connectToRobot = function(){
-    console.log("Connecting to robot at " + connectingIP);
+    console.log("Connecting to Robot");
+}
+
+var sendCommand = function(direction, amount){
+    command = "{0}|{1}".format(direction, amount);
+    console.log(command);
 }
 
 module.exports = {

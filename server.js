@@ -32,6 +32,12 @@ app.get('/verify_ip/:ipAddr', function(req, res){
     res.send(url);
 });
 
+app.get('/control/:dir/:amount', function(req, res){
+	var dir = req.params.dir.substring(1);
+	var amount = req.params.amount.substring(1);
+    console.log(dir + "|" + amount);
+});
+
 //showing that the program is running on the RUN_PORT
 app.listen(RUN_PORT, function(){
 	console.log("Running on port " + RUN_PORT);
