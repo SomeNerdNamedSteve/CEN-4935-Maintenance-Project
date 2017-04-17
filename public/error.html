@@ -1,21 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Error Page</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="controllers/errorApp.js"></script>
     </head>
 
     <body>
-        <div class="container">
+        <div class="container"  ng-app="errorApp" ng-controller="errorCtrl">
             <h1>Error</h1>
             <h3>You did not input the correct IP Address of the server or did not input in IP Address.</h3>
-            <h4>Click <a href="index.html">here</a> to go back to the home page and try again.</h4>
+            <h4>Click the button below to go back to the home page and try again.</h4>
+            <button class="btn btn-default" ng-click="backToHome()">Back to Home Page</button>
         </div>
         <!--Javascript of project-->
         <!-- Latest compiled and minified Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

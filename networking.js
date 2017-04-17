@@ -1,11 +1,14 @@
 var net = require('net');
 
+var VIDEO_IN_PORT = 45679;
+var CONTROL_OUT = 45678;
+
 var connectToRobot = function(ip){
     if(net.isIP(ip)){
-        return "http://localhost:8080/robot_control"
+        return "robot_control";
     }else{
-        return "http://localhost:8080/error"
+        return "error";
     }
 }
 
-module.exports.checkIP = connectToRobot;
+module.exports.connectToRobot = connectToRobot;

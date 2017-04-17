@@ -1,6 +1,6 @@
 var app = angular.module('indexApp', []);
 
-app.controller('indexCtrl', function($scope, $http) {
+app.controller('indexCtrl', function($scope, $http, $window) {
 
     $scope.ipAddr = "";
     $scope.setIP = function(){
@@ -10,7 +10,8 @@ app.controller('indexCtrl', function($scope, $http) {
             }
         }
         $http.get("http://127.0.0.1:8080/verify_ip/\:" + $scope.ipAddr).success(function(response){
-            console.log(response);
+            route = "http://127.0.0.1:8080/" + response;
+            $window.location.href = route;
         });
     }
 });
