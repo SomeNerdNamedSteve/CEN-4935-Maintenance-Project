@@ -35,7 +35,7 @@ app.get('/verify_ip/:ipAddr', function(req, res){
 app.get('/control/:dir/:amount', function(req, res){
 	var dir = req.params.dir.substring(1);
 	var amount = req.params.amount.substring(1);
-    console.log(dir + "|" + amount);
+    networking.sendCommand(dir, amount);
 });
 
 //showing that the program is running on the RUN_PORT

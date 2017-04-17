@@ -19,11 +19,12 @@ var connectToRobot = function(){
 }
 
 var sendCommand = function(direction, amount){
-    command = "{0}|{1}".format(direction, amount);
+    command = direction + "|" + amount;
     console.log(command);
 }
 
 module.exports = {
                     "validateIP": validateIP,
-                    "connectToRobot": connectToRobot
+                    "connectToRobot": connectToRobot,
+                    "sendCommand": sendCommand
                 };
