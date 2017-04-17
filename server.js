@@ -17,6 +17,7 @@ app.get('/', function(req, res){
 
 //robot_control.html routing
 app.get('/robot_control', function(req, res){
+	networking.connectToRobot();
 	res.sendFile(publicPath + "/robot_control.html");
 });
 
@@ -27,7 +28,7 @@ app.get('/error', function(req, res){
 
 //HTTP GET Request from front end
 app.get('/verify_ip/:ipAddr', function(req, res){
-    var url = networking.connectToRobot(req.params.ipAddr.substring(1));
+    var url = networking.validateIP(req.params.ipAddr.substring(1));
     res.send(url);
 });
 
