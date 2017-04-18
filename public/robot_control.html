@@ -9,13 +9,20 @@
     </head>
 
     <body class="container">
+
+        <div class="jumbotron">
+            <h1>CEN 4935 Maintenance Project</h1>
+        </div>
+
         <!-- Video View (Insert Video stream code in here) -->
-        <!-- <div>
-            <iframe width="640" height="480"/>
-        </div> -->
+        <div class="row">
+            <div class="col-xs-12">
+                <iframe width="640" height="480"></iframe>
+            </div>
+        </div>
 
         <!-- User Control -->
-        <div ng-app="robotApp" ng-controller="robotControlController">
+        <div class="row" ng-app="robotApp" ng-controller="robotControlController">
             <button type="button" class="btn btn-default" ng-click="goUp()">Forward</button><br>
             <button type="button" class="btn btn-default" ng-click="goDown()">Back</button><br>
             <button type="button" class="btn btn-default" ng-click="goLeft()">Left</button><br>
