@@ -16,19 +16,21 @@
 
         <!-- Video View (Insert Video stream code in here) -->
         <div class="row">
-            <div class="col-xs-12">
-                <iframe width="640" height="480"></iframe>
+            <div class="col-xs-12" align="center">
+                <iframe id="camstream" width="640" height="480"></iframe>
             </div>
         </div>
 
         <!-- User Control -->
-        <div class="row" ng-app="robotApp" ng-controller="robotControlController">
-            <button type="button" class="btn btn-default" ng-click="goUp()">Forward</button><br>
-            <button type="button" class="btn btn-default" ng-click="goDown()">Back</button><br>
-            <button type="button" class="btn btn-default" ng-click="goLeft()">Left</button><br>
-            <button type="button" class="btn btn-default" ng-click="goRight()">Right</button><br>
-            Forward/Back: <input type="text" ng-model="movementAmount" />
-            Left/Right: <input type="text" ng-model="rotationAmount" />
+        <div class="row" ng-app="robotApp" align="center" ng-controller="robotControlController">
+            <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goUp()">Forward</button><br><br>
+            <span>
+                <button type="button" class="btn btn-default col-xs-1-offest-3" ng-click="goLeft()">Left</button>
+                <button type="button" class="btn btn-default col-xs-1-offset-8" ng-click="goRight()">Right</button>
+            </span><br><br>
+            <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goDown()">Back</button><br><br>
+            Forward/Back Movement: <input type="text" ng-model="movementAmount" /><br><br>
+            Left/Right Rotation: <input type="text" ng-model="rotationAmount" />
         </div>
     </body>
 </html>

@@ -21,8 +21,12 @@ var connectToRobot = function(){
 }
 
 var sendCommand = function(direction, amount){
-    command = direction + "|" + amount;
-    client.write(command);
+    if(!isNan(amount)){
+        command = direction + "|" + amount;
+        client.write(command);
+    }else{
+        
+    }
 }
 
 module.exports = {
