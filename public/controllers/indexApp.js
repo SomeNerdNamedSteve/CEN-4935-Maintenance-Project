@@ -9,8 +9,8 @@ app.controller('indexCtrl', function($scope, $http, $window) {
                 "ipAddr" : $scope.ipAddr
             }
         }
-        $http.get("http://127.0.0.1:8080/verify_ip/\:" + $scope.ipAddr).success(function(response){
-            route = "http://127.0.0.1:8080/" + response;
+        $http.get("http://127.0.0.1:5000/verify_ip/\:" + $scope.ipAddr).success(function(response){
+            route = "http://127.0.0.1:5000/" + response;
             $window.location.href = route;
         });
     }

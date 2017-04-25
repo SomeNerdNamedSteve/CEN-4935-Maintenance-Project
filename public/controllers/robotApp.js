@@ -3,28 +3,23 @@ var robotApp = angular.module('robotApp', []);
 robotApp.controller('robotControlController', function($scope, $http){
 
     $scope.goUp = function(){
-
         var config = {
             params : {
                 "dir": "up",
                 "amount": $scope.movementAmount
             }
         }
-
-        $http.get("http://127.0.0.1:8080/control/\:forward/\:" + $scope.movementAmount);
+        $http.post("http://127.0.0.1:5000/control/\:forward/\:" + $scope.movementAmount);
     }
 
     $scope.goDown = function(){
-
         var config = {
             params : {
                 "dir": "back",
                 "amount": $scope.movementAmount
             }
         }
-
-        $http.get("http://127.0.0.1:8080/control/\:back/\:" + $scope.movementAmount);
-
+        $http.post("http://127.0.0.1:5000/control/\:back/\:" + $scope.movementAmount);
     }
 
     $scope.goLeft = function(){
@@ -34,8 +29,7 @@ robotApp.controller('robotControlController', function($scope, $http){
                 "amount": $scope.rotationAmount
             }
         }
-
-        $http.get("http://127.0.0.1:8080/control/\:left/\:" + $scope.rotationAmount);
+        $http.post("http://127.0.0.1:5000/control/\:left/\:" + $scope.rotationAmount);
     }
 
     $scope.goRight = function(){
@@ -45,8 +39,7 @@ robotApp.controller('robotControlController', function($scope, $http){
                 "amount": $scope.rotationAmount
             }
         }
-
-        $http.get("http://127.0.0.1:8080/control/\:right/\:" + $scope.rotationAmount);
+        $http.post("http://127.0.0.1:5000/control/\:right/\:" + $scope.rotationAmount);
     }
 
 });

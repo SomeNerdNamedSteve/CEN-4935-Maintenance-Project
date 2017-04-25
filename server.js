@@ -4,7 +4,6 @@ var path = require('path');
 var networking = require('./networking');
 
 //variables
-var RUN_PORT = 8080;
 var publicPath = path.join(__dirname, 'public');
 var app = express();
 
@@ -32,13 +31,14 @@ app.get('/verify_ip/:ipAddr', function(req, res){
     res.send(url);
 });
 
-app.get('/control/:dir/:amount', function(req, res){
+app.post('/control/:dir/:amount', function(req, res){
 	var dir = req.params.dir.substring(1);
 	var amount = req.params.amount.substring(1);
     networking.sendCommand(dir, amount);
+	res.sendStatus(200);
 });
 
 //showing that the program is running on the RUN_PORT
-app.listen(RUN_PORT, function(){
-	console.log("Running on port " + RUN_PORT);
+app.listen(5000, function(){
+	console.log("Listening on port 5000");
 });
