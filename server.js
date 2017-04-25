@@ -39,6 +39,6 @@ app.post('/control/:dir/:amount', function(req, res){
 });
 
 //showing that the program is running on the RUN_PORT
-app.listen(process.env.PORT, function(){
+app.listen(5000, function(){
 	console.log("Listening on port 5000");
 });

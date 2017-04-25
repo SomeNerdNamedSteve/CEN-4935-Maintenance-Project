@@ -25,7 +25,7 @@ var sendCommand = function(direction, amount){
         command = direction + "|" + amount;
         client.write(command);
     }else{
-        
+        client.write(direction + "|0");
     }
 }
 
