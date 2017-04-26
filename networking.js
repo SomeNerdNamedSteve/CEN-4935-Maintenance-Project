@@ -21,7 +21,7 @@ var connectToRobot = function(){
 }
 
 var sendCommand = function(direction, amount){
-    if(!isNan(amount)){
+    if(parseInt(amount) != NaN){
         command = direction + "|" + amount;
         client.write(command);
     }else{

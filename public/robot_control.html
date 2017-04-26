@@ -22,7 +22,8 @@
         </div>
 
         <!-- User Control -->
-        <div class="row" ng-app="robotApp" align="center" ng-controller="robotControlController">
+        <div class="row" ng-app="robotApp" align="center" ng-controller="robotControlController"
+                ng-keyup="onKeyUp($event)" ng-keyup="onKeyLeft($event)" ng-keyup="onKeyDown($event)" ng-keyup="onKeyRight($event)">
             <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goUp()">Forward</button><br><br>
             <span>
                 <button type="button" class="btn btn-default col-xs-1-offest-3" ng-click="goLeft()">Left</button>
