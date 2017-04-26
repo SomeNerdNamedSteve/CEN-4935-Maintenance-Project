@@ -4,11 +4,7 @@
   "description": "Maintenance Project for CEN 4935",
   "main": "index.js",
   "dependencies":{
-    "express": "*",
-    "convert-string": "*"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "express": "*"
   },
   "repository": "https://github.com/SomeNerdNamedSteve/CEN-4935-Maintenance-Project.git",
   "author": "Steven Burgess",
