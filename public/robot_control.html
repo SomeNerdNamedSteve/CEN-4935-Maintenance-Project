@@ -14,15 +14,14 @@
             <h1>CEN 4935 Maintenance Project</h1>
         </div>
 
-        <!-- Video View (Insert Video stream code in here) -->
-        <div class="row">
-            <div class="col-xs-12" align="center">
-                <iframe id="camstream" width="640" height="480"></iframe>
-            </div>
-        </div>
-
         <!-- User Control -->
         <div class="row" ng-app="robotApp" align="center" ng-controller="robotControlController">
+            <!-- Video Viewport for robot -->
+            <div class="row">
+                <div class="col-xs-12" align="center">
+                    <iframe id="camstream" width="640" height="480"></iframe>
+                </div>
+            </div>
             <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goUp()">Forward</button><br><br>
             <span>
                 <button type="button" class="btn btn-default col-xs-1-offest-3" ng-click="goLeft()">Left</button>
